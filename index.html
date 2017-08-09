@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--META TAGS-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <meta name="description" content="Hero Gallery"/>
+
+    <title>The Faces of My Heroes</title>
+
+    <!-- Bootstrap, Animate.css, Font Awesome, CSS -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet" type="text/css">
+
+    <link href="https://fastcdn.org/Animate.css/3.4.0/animate.min.css" rel="stylesheet">
+
+</head><!--End Head Tags-->
+
+<!--BODY-->
+  <div id="panel-text" class="panels">
+    <div id="Doctor" class="panel panel1">
+      <p>Matt</p>
+      <p><strong>Doctor</strong></p>
+      <p>Smith</p>
+    </div><!--END Doctor-->
+    <div id="Mal" class="panel panel2">
+      <p>Nathan</p>
+      <p><strong>Captain</strong></p>
+      <p>Fillion</p>
+    </div><!--END Captain-->
+    <div id="Harry" class="panel panel3">
+      <p>Daniel</p>
+      <p><strong>Wizard</strong></p>
+      <p>Radcliffe</p>
+    </div><!--END Wizard-->
+    <div class="panel panel4">
+      <p>Viggo</p>
+      <p><strong>Rider</strong></p>
+      <p>Mortensen</p>
+    </div><!--END Rider-->
+    <div class="panel panel5">
+      <p>Benedict</p>
+      <p><strong>Detective</strong></p>
+      <p>Cumberbatch</p>
+    </div><!--END Detective-->
+  </div><!--END Panels-->
+
+  <script>
+    const panels = document.querySelectorAll('.panel');
+
+    function toggleOpen() {
+      this.classList.toggle('open');
+    }
+
+    function toggleActive(e) {
+      console.log(e.propertyName);
+      if(e.propertyName.includes('flex')) {
+        this.classList.toggle('open-active');
+      }
+    }
+
+    panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+    panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+
+  </script>
+
+    <script text="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
+
